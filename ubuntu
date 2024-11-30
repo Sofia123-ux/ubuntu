@@ -1,0 +1,12 @@
+pipeline {
+    agent any
+    stages {
+        stage('ssh ubuntu@10.10.13.46') {
+            steps {
+                script {
+                    sh 'ssh ubuntu@10.10.13.46 "ls /home/ubuntu"'
+                }
+            }
+        }
+    }
+}
